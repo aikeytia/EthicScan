@@ -77,7 +77,7 @@ export default function HomeScreen() {
         {/* Header */}
         <View style={styles.header}>
           <View>
-            <Text style={styles.greeting}>Merhaba! 👋</Text>
+            <Text style={styles.greeting}>Hoş Geldiniz! 👋</Text>
             <Text style={styles.subtitle}>Bugün ne tarayacaksın?</Text>
           </View>
           <View style={styles.logoSmall}>
