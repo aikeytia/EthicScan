@@ -89,6 +89,12 @@ EthicScan, ürün barkodunu tarayarak saniyeler içinde kapsamlı bir etik rapor
 
 ---
 
+## 📱 Ekran Görüntüleri
+
+<!-- Ekran görüntülerinizi bu başlığın hemen altına sürükleyip bırakabilirsiniz -->
+
+---
+
 ## 🚀 Kurulum
 
 ### Gereksinimler
