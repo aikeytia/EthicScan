@@ -100,7 +100,7 @@ export default function ProductDetailScreen() {
       <Animated.ScrollView style={{ opacity: fadeAnim }} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
         {/* Header */}
         <View style={styles.header}>
-          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <TouchableOpacity style={styles.backBtn} onPress={() => router.canGoBack() ? router.back() : router.replace('/(tabs)/home')}>
             <Ionicons name="arrow-back" size={24} color={Colors.textLight} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.favBtn} onPress={handleToggleFavorite}>

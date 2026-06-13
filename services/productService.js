@@ -72,6 +72,10 @@ export const lookupProduct = async (barcode) => {
  */
 const getProductFromFirestore = async (barcode) => {
   try {
+    // If using dummy config, skip Firestore to prevent hanging
+    if (db.app.options.apiKey.includes('Demo_Replace')) {
+      return null;
+    }
     const docRef = doc(db, PRODUCTS_COLLECTION, barcode);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {

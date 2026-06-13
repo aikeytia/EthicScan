@@ -21,6 +21,7 @@ export default function ScanScreen() {
   const [scanned, setScanned] = useState(false);
   const [showManual, setShowManual] = useState(params.manual === 'true');
   const [manualBarcode, setManualBarcode] = useState('');
+  const [errorMsg, setErrorMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const scanLineAnim = useRef(new Animated.Value(0)).current;
   const flashAnim = useRef(new Animated.Value(0)).current;
@@ -39,6 +40,7 @@ export default function ScanScreen() {
     if (scanned || isLoading) return;
     setScanned(true);
     setIsLoading(true);
+    setErrorMsg(null);
 
     // Haptic feedback
     try { await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success); } catch (e) {}
@@ -68,33 +70,32 @@ export default function ScanScreen() {
         await saveToHistory(product);
         router.push(`/product/${barcode}`);
       } else {
-        Alert.alert(
-          'Ürün Bulunamadı',
-          `"${barcode}" barkoduna ait ürün veritabanımızda bulunamadı.`,
-          [
-            { text: 'Tekrar Tara', onPress: () => { setScanned(false); setIsLoading(false); } },
-            { text: 'Geri Dön', onPress: () => router.back() },
-          ]
-        );
+        setErrorMsg(`"${barcode}" barkoduna ait ürün bulunamadı.`);
+        if (Platform.OS !== 'web') {
+          Alert.alert('Ürün Bulunamadı', `"${barcode}" barkoduna ait ürün veritabanımızda bulunamadı.`);
+        }
       }
     } catch (error) {
       console.error('Scan error:', error);
-      Alert.alert('Hata', 'Ürün aranırken bir hata oluştu.', [
-        { text: 'Tekrar Dene', onPress: () => { setScanned(false); setIsLoading(false); } },
-      ]);
+      setErrorMsg('Ürün aranırken bir hata oluştu.');
+      if (Platform.OS !== 'web') {
+        Alert.alert('Hata', 'Ürün aranırken bir hata oluştu.');
+      }
     } finally {
       setIsLoading(false);
+      setScanned(false);
     }
   };
 
   const handleManualSubmit = () => {
     const code = manualBarcode.trim();
     if (code.length < 4) {
-      Alert.alert('Hata', 'Lütfen geçerli bir barkod numarası girin.');
+      setErrorMsg('Lütfen geçerli bir barkod numarası girin.');
       return;
     }
     setScanned(true);
     setIsLoading(true);
+    setErrorMsg(null);
     processBarcode(code);
   };
 
@@ -124,6 +125,12 @@ export default function ScanScreen() {
           <TouchableOpacity style={styles.submitBtn} onPress={handleManualSubmit} disabled={isLoading}>
             <Text style={styles.submitText}>{isLoading ? 'Aranıyor...' : 'Ara'}</Text>
           </TouchableOpacity>
+          {errorMsg && (
+            <View style={styles.errorContainer}>
+              <Ionicons name="warning" size={20} color={Colors.danger} />
+              <Text style={styles.errorText}>{errorMsg}</Text>
+            </View>
+          )}
           <TouchableOpacity style={styles.switchBtn} onPress={() => setShowManual(false)}>
             <Ionicons name="camera-outline" size={20} color={Colors.primaryLight} />
             <Text style={styles.switchText}>Kamera ile Tara</Text>
@@ -171,7 +178,7 @@ export default function ScanScreen() {
       <View style={styles.overlay}>
         {/* Top */}
         <View style={styles.overlayTop}>
-          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <TouchableOpacity style={styles.backButton} onPress={() => router.canGoBack() ? router.back() : router.replace('/(tabs)/home')}>
             <Ionicons name="arrow-back" size={28} color="#FFF" />
           </TouchableOpacity>
           <Text style={styles.scanTitle}>Barkod Tara</Text>
@@ -255,4 +262,6 @@ const styles = StyleSheet.create({
   permBtnText: { fontSize: 16, fontFamily: 'Inter_700Bold', color: '#FFF' },
   backBtn2: { marginTop: Spacing.md, padding: Spacing.sm },
   backBtnText: { fontSize: 14, fontFamily: 'Inter_500Medium', color: Colors.textMuted },
+  errorContainer: { flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(244, 67, 54, 0.1)', padding: Spacing.md, borderRadius: BorderRadius.md, marginTop: Spacing.md, borderWidth: 1, borderColor: 'rgba(244, 67, 54, 0.3)' },
+  errorText: { color: Colors.danger, fontFamily: 'Inter_500Medium', fontSize: 14, marginLeft: Spacing.sm },
 });
