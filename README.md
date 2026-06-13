@@ -91,6 +91,15 @@ EthicScan, ürün barkodunu tarayarak saniyeler içinde kapsamlı bir etik rapor
 
 ## 📱 Ekran Görüntüleri
 
+<img width="452" height="912" alt="Ekran görüntüsü 2026-06-14 015948" src="https://github.com/user-attachments/assets/4eecf4e0-a951-4fd7-8ac3-9545a79ae274" />
+<img width="477" height="911" alt="Ekran görüntüsü 2026-06-14 014118" src="https://github.com/user-attachments/assets/8b753f1e-04ed-4c0b-b893-82e897a8e994" />
+<img width="481" height="922" alt="Ekran görüntüsü 2026-06-14 014245" src="https://github.com/user-attachments/assets/761f77e1-23ff-4eff-bbbc-752845972162" />
+<img width="491" height="915" alt="Ekran görüntüsü 2026-06-14 014309" src="https://github.com/user-attachments/assets/2b26d12f-4bd1-4b74-ae6b-9391944a9b75" />
+<img width="451" height="907" alt="Ekran görüntüsü 2026-06-14 020052" src="https://github.com/user-attachments/assets/f89d7134-617f-4293-b79d-c5018b36ef9f" />
+<img width="452" height="917" alt="Ekran görüntüsü 2026-06-14 020107" src="https://github.com/user-attachments/assets/f01b7701-cd91-4dc9-ad56-354145e210d4" />
+<img width="460" height="917" alt="Ekran görüntüsü 2026-06-14 020319" src="https://github.com/user-attachments/assets/49c7402a-919a-4ea0-868a-f46de6e78836" />
+
+
 <!-- Ekran görüntülerinizi bu başlığın hemen altına sürükleyip bırakabilirsiniz -->
 
 ---
