@@ -63,6 +63,7 @@ EthicScan, ürün barkodunu tarayarak saniyeler içinde kapsamlı bir etik rapor
 - 🐧 **Üzgün Penguen Animasyonu**: Düşük etik skorlu ürünlerde üzgün penguen
 - 📳 **Haptic Feedback**: Tarama anında titreşim geri bildirimi
 - ✨ **Micro-Animasyonlar**: Akıcı geçişler ve stagger efektleri
+- 📦 **Geniş Veritabanı**: Türk pazarına uygun, hazır ürün örnek verileri
 
 ---
 
