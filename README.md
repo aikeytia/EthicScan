@@ -57,6 +57,7 @@ EthicScan, ürün barkodunu tarayarak saniyeler içinde kapsamlı bir etik rapor
 - 📝 **Manuel Giriş**: Barkod numarası ile arama
 - 📜 **Tarama Geçmişi**: Tüm taramalarınızın kaydı
 - ❤️ **Favoriler**: Beğendiğiniz ürünleri kaydedin
+- 🌐 **Global Veritabanı**: Cihaz internete bağlıysa Open Food Facts API üzerinden dünya çapında yüz binlerce ürünün bilgisini anlık olarak çeker ve hesaplar.
 
 ### Bonus / Eğlence Özellikleri
 - 🌍 **Mutlu Dünya Animasyonu**: Etik skor ≥ 80 olan ürünlerde dans eden dünya
