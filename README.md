@@ -96,6 +96,7 @@ EthicScan, ürün barkodunu tarayarak saniyeler içinde kapsamlı bir etik rapor
 <img width="481" height="922" alt="Ekran görüntüsü 2026-06-14 014245" src="https://github.com/user-attachments/assets/761f77e1-23ff-4eff-bbbc-752845972162" />
 <img width="491" height="915" alt="Ekran görüntüsü 2026-06-14 014309" src="https://github.com/user-attachments/assets/2b26d12f-4bd1-4b74-ae6b-9391944a9b75" />
 <img width="451" height="907" alt="Ekran görüntüsü 2026-06-14 020052" src="https://github.com/user-attachments/assets/f89d7134-617f-4293-b79d-c5018b36ef9f" />
+<img width="480" height="910" alt="Ekran görüntüsü 2026-06-14 014345" src="https://github.com/user-attachments/assets/a60930e2-39c1-4e45-998a-484189e7e658" />
 <img width="452" height="917" alt="Ekran görüntüsü 2026-06-14 020107" src="https://github.com/user-attachments/assets/f01b7701-cd91-4dc9-ad56-354145e210d4" />
 <img width="457" height="922" alt="Ekran görüntüsü 2026-06-14 020419" src="https://github.com/user-attachments/assets/814c722a-6231-47a7-8053-7d61120eb50d" /><img width="457" height="916" alt="Ekran görüntüsü 2026-06-14 020534" src="https://github.com/user-attachments/assets/3488b0ce-4a19-41db-aae3-188fefad8da1" />
 <img width="460" height="917" alt="Ekran görüntüsü 2026-06-14 020319" src="https://github.com/user-attachments/assets/49c7402a-919a-4ea0-868a-f46de6e78836" />
