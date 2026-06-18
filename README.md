@@ -220,7 +220,7 @@ EthicScan/
 
 ## 👨‍💻 Geliştirici
 
-Bu proje, Mobil Programlama dersi kapsamında geliştirilmiştir.
+Bu proje, Mustafa Karakuş tarafından geliştirilmiştir.
 
 ## 📄 Lisans
 
